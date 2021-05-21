@@ -22,10 +22,10 @@
         <img src="img/moon.png" id="moon" alt="">
         <img src="img/mountains_behind.png" id="mountains_behind" alt="">
         <h2 id="text">Moon Light</h2>
-        <a href="#" id="btn">Explore</a>
+        <a href="#sec" id="btn">Explore</a>
         <img src="img/mountains_front.png" id="mountains_front" alt="">
     </section>
-    <div class="sec">
+    <div class="sec" id="sec">
         <h2>Parallax Scrolling Effects</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iste id odio incidunt quidem fugiat officia praesentium commodi hic ad, quas, numquam, cum expedita illum. Accusamus debitis deserunt eos enim aliquid numquam minus explicabo excepturi vero? Ad dolor blanditiis tempore dicta beatae, quas deleniti. Doloremque et veritatis fugit ratione inventore vero reprehenderit! Enim corrupti explicabo delectus sit sequi iusto optio illum quis rem perspiciatis repudiandae praesentium voluptas tenetur aut, beatae, neque veniam. Explicabo debitis, veritatis aliquam cupiditate beatae molestiae. Rerum, asperiores exercitationem esse assumenda praesentium neque veritatis, nesciunt maxime quae aliquam libero, illum repudiandae rem porro corrupti sint fugit sit?
         <br>
@@ -34,7 +34,30 @@
         <br>
         <br>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iste id odio incidunt quidem fugiat officia praesentium commodi hic ad, quas, numquam, cum expedita illum. Accusamus debitis deserunt eos enim aliquid numquam minus explicabo excepturi vero? Ad dolor blanditiis tempore dicta beatae, quas deleniti. Doloremque et veritatis fugit ratione inventore vero reprehenderit! Enim corrupti explicabo delectus sit sequi iusto optio illum quis rem perspiciatis repudiandae praesentium voluptas tenetur aut, beatae, neque veniam. Explicabo debitis, veritatis aliquam cupiditate beatae molestiae. Rerum, asperiores exercitationem esse assumenda praesentium neque veritatis, nesciunt maxime quae aliquam libero, illum repudiandae rem porro corrupti sint fugit sit?
+        <br>
+        <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iste id odio incidunt quidem fugiat officia praesentium commodi hic ad, quas, numquam, cum expedita illum. Accusamus debitis deserunt eos enim aliquid numquam minus explicabo excepturi vero? Ad dolor blanditiis tempore dicta beatae, quas deleniti. Doloremque et veritatis fugit ratione inventore vero reprehenderit! Enim corrupti explicabo delectus sit sequi iusto optio illum quis rem perspiciatis repudiandae praesentium voluptas tenetur aut, beatae, neque veniam. Explicabo debitis, veritatis aliquam cupiditate beatae molestiae. Rerum, asperiores exercitationem esse assumenda praesentium neque veritatis, nesciunt maxime quae aliquam libero, illum repudiandae rem porro corrupti sint fugit sit?
         </p>
     </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
 </body>
 </html>
